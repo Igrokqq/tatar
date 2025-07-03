@@ -118,17 +118,56 @@ export default observer(({ path, pathLoop }) => {
     }, []);
 
     useEffect(() => {
-        const keyPoints = [0, 0.9, 2.867, 5.067, 9];
-        const i = mainPageStore.currentSlide;
-        const dir = mainPageStore.direction > 0;
-        const from = dir ? keyPoints[i - 1] : keyPoints[i + 1];
-        const to = keyPoints[i];
+        const video = videoRef.current;
+        const loopVideo = videoRefLoop.current;
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext('2d');
 
-        if (Number.isFinite(from) && Number.isFinite(to)) {
-            playFrameByFrame(from, to, dir, keyPoints.length);
-        }
+        const hasScrolledRef = { current: false };
 
-    }, [mainPageStore.currentSlide]);
+        if (!video || !loopVideo || !canvas || !ctx) return;
+
+        const draw = () => {
+            if (!video.ended) {
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                requestAnimationFrame(draw);
+            }
+        };
+
+        const drawLoop = () => {
+            if (!loopVideo.paused && !loopVideo.ended) {
+                ctx.drawImage(loopVideo, 0, 0, canvas.width, canvas.height);
+                requestAnimationFrame(drawLoop);
+            }
+        };
+
+        const onScroll = () => {
+            if (!hasScrolledRef.current) {
+                hasScrolledRef.current = true;
+                video.play();
+                requestAnimationFrame(draw);
+                window.removeEventListener('scroll', onScroll);
+            }
+        };
+
+        const onEnd = () => {
+            mainPageStore.end(); // если нужно
+            loopVideo.play();
+            drawLoop();
+        };
+
+        video.addEventListener('ended', onEnd);
+        video.addEventListener('loadeddata', () => {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+        });
+        window.addEventListener('scroll', onScroll);
+
+        return () => {
+            video.removeEventListener('ended', onEnd);
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, []);
 
     return (
         <div className='SubPageDecor'>

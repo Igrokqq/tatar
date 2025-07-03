@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 
 class MainPageStore {
-    currentSlide = -1;
+    currentSlide = 0;
     slidePlaying = false
     direction = 1
     checkScroll = true;

@@ -54,6 +54,7 @@ export default observer(({ path }) => {
                 setTimeout(renderNext, 1000 / fps); // фикс
             };
 
+            console.log('');
 
             video.addEventListener('seeked', onSeeked);
             video.currentTime = time;

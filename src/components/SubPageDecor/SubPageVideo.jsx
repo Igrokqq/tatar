@@ -13,7 +13,7 @@ export default observer(({ path }) => {
         ctx.drawImage(video, 0, 0, canvasRef.current.width, canvasRef.current.height);
     };
 
-    const playFrameByFrame = (from, to, forward = true, fps = 90) => {
+    const playFrameByFrame = (from, to, forward = true, fps = 30) => {
         const video = videoRef.current;
         const canvas = canvasRef.current;
         const ctx = canvas?.getContext('2d');

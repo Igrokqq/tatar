@@ -1,0 +1,67 @@
+.mapNumBlock {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid #424242;
+
+    &_wide {
+        width: 200%;
+
+        @media(max-width: 610px) {
+            width: 100%;
+        }
+    }
+
+    &_small {
+        width: 60%;
+
+        @media(max-width: 610px) {
+            width: 100%;
+        }
+    }
+
+    &_num {
+        display: flex;
+        width: calc(20% - 24px);
+        justify-content: center;
+        align-items: center;
+        font-size: 80px;
+        font-weight: 400;
+
+        @media(max-width: 1200px) {
+            font-size: 60px;
+        }
+    }
+
+    &_content {
+        width: calc(80% - 24px);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        &_text {
+            width: 100%;
+            font-weight: 200;
+            font-size: 20px;
+
+            @media(max-width: 1200px) {
+                font-size: 18px;
+            }
+        }
+
+        &_title {
+            width: 100%;
+            font-weight: 400;
+            font-size: 40px;
+
+            @media(max-width: 1200px) {
+                font-size: 30px;
+            }
+        }
+    }
+}

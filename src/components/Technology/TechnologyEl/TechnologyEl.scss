@@ -1,0 +1,68 @@
+.TechnologyEl {
+    width: 100%;
+    // width: calc(33% - 40px);
+    // height: 500px;
+    background-position: center;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-wrap: wrap;
+    align-items: end;
+    border-radius: 20px;
+    border: 1px solid #424242;
+    // transition: background-size 3000ms ease-in-out;
+    // background-size: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        transition: scale 500ms ease-out;
+    }
+
+    &:hover {
+        img {
+            scale: 1.1;
+        }
+
+        // background-size: 120%;
+    }
+
+    @media(max-width: 1200px) {
+        width: calc(50% - 40px);
+    }
+
+    @media(max-width: 850px) {
+        width: 100%;
+    }
+
+    &_info {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        flex-wrap: wrap;
+        padding: 32px;
+        gap: 24px;
+        background: linear-gradient(to top, #000, #0000);
+        border-radius: 20px;
+        overflow: hidden;
+
+        @media(max-width: 450px) {
+            padding: 16px;
+            gap: 12px;
+        }
+    }
+
+    &_title {
+        width: 100%;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    &_text {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 200;
+        max-width: 442px;
+    }
+}

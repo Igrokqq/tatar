@@ -1,0 +1,106 @@
+.Advantages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // padding-bottom: 50px;
+
+    &_wrapper {
+        // max-width: 1400px;
+        margin: 0 auto;
+        // margin-top: 32px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        padding: 0px 18px;
+    }
+
+    &_list {
+        // height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: fit-content;
+        width: 100%;
+        min-width: fit-content;
+        column-gap: 24px;
+    }
+
+    &_element {
+        min-width: 500px;
+        max-width: 500px;
+        border-radius: 36px;
+        overflow: hidden;
+
+        @media(max-width: 550px) {
+            min-width: 300px;
+        }
+
+        &_wrapper {
+            transition: transform 300ms;
+        }
+    }
+
+    &_decor {
+        width: 100% !important;
+        align-items: start !important;
+
+        &_inner {
+            width: 100%;
+            min-height: 300px;
+            background-size: cover;
+
+            &_light {
+                filter: invert(1);
+            }
+        }
+    }
+
+    &_content {
+        padding: 30px;
+        padding-top: 200px;
+        min-height: 500px;
+        position: relative;
+        background: linear-gradient(180deg, rgba(16, 16, 16, 0), #101010 50%);
+        // background: var(--gradient-bg);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: end;
+        align-content: end;
+
+        @media(max-width: 550px) {
+            padding-top: 100px;
+            min-height: 350px;
+            padding: 24px;
+        }
+
+        &_light {
+            background: linear-gradient(180deg, #eee0, #eee 50%);
+
+        }
+    }
+
+    &_header {
+        width: 100%;
+
+        @media(max-width: 550px) {
+            font-size: 30px !important;
+        }
+    }
+
+    &_description {
+        width: 100%;
+        color: #fff8;
+
+        min-height: 130px;
+        display: flex;
+        align-items: center;
+
+        @media(max-width: 550px) {
+            font-size: 20px !important;
+            min-height: 0px;
+            margin-top: 12px;
+        }
+    }
+}

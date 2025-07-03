@@ -1,0 +1,33 @@
+.GreenEnergy {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px !important;
+
+    &_content {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 36px;
+        flex-wrap: wrap;
+    }
+
+    &_content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 40px;
+        padding: 0 !important;
+    }
+
+    &_heroVid {
+        top: -80px;
+        width: 100% !important;
+        align-items: baseline !important;
+        z-index: -1;
+    }
+}

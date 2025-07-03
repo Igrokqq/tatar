@@ -1,0 +1,13 @@
+.FramePlayer {
+    img {
+        user-select: none;
+    }
+}
+
+.framePlayerImg {
+    transition: box-shadow 200ms, opacity 500ms;
+
+    &_rounded {
+        border-radius: 20px;
+    }
+}

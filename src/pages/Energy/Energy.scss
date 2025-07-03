@@ -1,0 +1,15 @@
+.Energy{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    &_content{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 36px;
+        flex-wrap: wrap;
+    }
+}

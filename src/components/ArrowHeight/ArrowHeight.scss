@@ -1,0 +1,34 @@
+.ArrowHeight {
+    border-radius: 12px;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #8888 0%, #888A 40%, #0009 60%, #000 100%);
+    backdrop-filter: blur(10px);
+    background-size: 100% 250%;
+    background-position: 0% 0%;
+    transition: background-position 300ms;
+    cursor: pointer;
+    user-select: none;
+
+    img {
+        rotate: 90deg;
+        transition: filter 200ms;
+        filter: invert(0) !important;
+
+    }
+
+    &:hover {
+        background-position: 0% 100%;
+
+        img {
+            filter: invert(0) !important;
+        }
+    }
+
+    &_rotate {
+        rotate: 180deg;
+    }
+
+}

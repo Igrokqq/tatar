@@ -1,0 +1,15 @@
+.ThemeChanger{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        transition: opacity 300ms;
+        width: 24px;
+    }
+    &:hover{
+        img{
+            opacity: .8;
+        }
+    }
+}

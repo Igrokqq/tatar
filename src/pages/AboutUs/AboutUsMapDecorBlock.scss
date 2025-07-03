@@ -1,0 +1,204 @@
+.AboutUsMapDecorBlock {
+    min-width: 100vw !important;
+    cursor: pointer;
+    flex-wrap: wrap;
+    z-index: 9;
+
+    &_top {
+        z-index: 99;
+    }
+
+    &_container {
+        display: flex;
+        justify-content: start !important;
+        align-items: center !important;
+        left: 12px;
+
+        @media(max-width: 700px) {
+            left: .5vw;
+        }
+
+
+        &_left {
+            justify-content: right !important;
+            order: -1;
+            left: -12px;
+
+            @media(max-width: 700px) {
+                left: -.5vw;
+            }
+
+        }
+
+        &_center {
+            justify-content: center !important;
+            order: -1;
+            top: -50px;
+
+            @media(max-width: 950px) {
+                top: -25px;
+            }
+
+            @media(max-width: 700px) {
+                top: -4vw;
+            }
+
+        }
+
+        &_inner {
+            display: flex;
+            flex-wrap: wrap;
+            white-space: nowrap;
+        }
+    }
+
+    &_title {
+
+        @media(max-width: 950px) {
+            font-size: 12px !important;
+        }
+
+        @media(max-width: 600px) {
+            font-size: 1.4vw !important;
+        }
+
+        &_bold {
+            font-weight: 500;
+        }
+
+        &_left {
+            text-align: right;
+            width: 100%;
+        }
+
+        &_center {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+
+    &_textAndCircle {
+        display: flex;
+        // column-gap: 12px;
+        align-items: center;
+        // padding-right: 48px;
+
+        &_center {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &_mm {
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 400px;
+        max-height: 400px;
+        margin: 0 auto;
+        position: absolute;
+        // background-color: #FFF;
+        z-index: 999999;
+        // top: 45vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        background-size: cover;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 300ms;
+        // left: -50%;
+        border-radius: 10px;
+        overflow: hidden;
+        // @media(max-width: 750px) {
+        //     height: 300px;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        // }
+
+
+        @media(max-width: 700px) {
+            min-width: 70vw;
+            max-width: 70vw;
+            min-height: 100vw;
+            max-height: 100vw;
+        }
+
+        &_wrapper {
+            width: 100% !important;
+            top: 16px;
+            left: 120px;
+            align-items: baseline !important;
+
+            &_left {
+                left: -120px;
+            }
+
+            @media(max-width: 700px) {
+                position: fixed !important;
+                left: 0px !important;
+                top: 20vw !important;
+                // max-width: 90vw !important;
+                // display: none !important;
+            }
+        }
+
+        &_active {
+            opacity: 1;
+        }
+
+
+        &_text {
+            padding: 17px;
+            background-color: rgba($color: #000000, $alpha: .5);
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            flex-wrap: wrap;
+
+            &_title {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                color: #FFF !important;
+
+                // white-space: nowrap;
+                // @media(max-width: 750px) {
+                //     font-size: 40px;
+                // }
+            }
+
+            &_description {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                // font-weight: 200;
+                // font-size: 30px;
+                color: #FFF !important;
+
+                @media(max-width: 750px) {
+                    font-size: 20px !important;
+                }
+            }
+        }
+
+        // &_newYork {
+        //     top: 5vh;
+        // }
+
+        // &_Germany {
+        //     top: 10vh;
+        // }
+
+        // &_Paderborn,
+        // &_Munich {
+        //     left: -10vw !important;
+        //     top: 5vh;
+        // }
+    }
+}

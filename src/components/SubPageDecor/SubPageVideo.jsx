@@ -13,7 +13,7 @@ export default observer(({ path }) => {
         ctx.drawImage(video, 0, 0, canvasRef.current.width, canvasRef.current.height);
     };
 
-    const playFrameByFrame = (from, to, forward = true, fps = 60) => {
+    const playFrameByFrame = (from, to, forward = true, fps = 30) => {
         const video = videoRef.current;
         const canvas = canvasRef.current;
         const ctx = canvas?.getContext('2d');
@@ -51,19 +51,20 @@ export default observer(({ path }) => {
                 video.removeEventListener('seeked', onSeeked);
                 ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                 frameIndex++;
-                setTimeout(renderNext, 0);
+                setTimeout(renderNext, 1000 / fps); // фикс
             };
+
 
             video.addEventListener('seeked', onSeeked);
             video.currentTime = time;
         };
 
         const onStartSeeked = () => {
-            console.log('🚀 стартовый seeked:', current.toFixed(3));
             video.removeEventListener('seeked', onStartSeeked);
             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-            setTimeout(renderNext, 0);
+            setTimeout(renderNext, 1000 / fps); // фикс
         };
+
 
 
 

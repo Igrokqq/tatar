@@ -38,6 +38,8 @@
                 @extend .RealEstate_hero_decor;
                 z-index: 9;
                 opacity: 1;
+                top: 100vh;
+                align-items: end !important;
 
                 &_r {
                     rotate: 180deg;

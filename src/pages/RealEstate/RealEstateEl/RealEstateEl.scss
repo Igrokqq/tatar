@@ -1,0 +1,106 @@
+.RealEstateEl {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid var(--bg-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+    &_first {
+        border-radius: 16px 16px 0px 0px;
+    }
+
+    &_last {
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    &_firstNlast {
+        border-radius: 16px 16px 16px 16px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(150, 150, 150, 0.2);
+        transition: height 300ms ease;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        height: 100%;
+    }
+
+    @media(max-width: 500px) {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &_title {
+        width: calc(50% - 20px);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        @media(max-width: 1400px) {
+            width: calc(20% - 20px);
+        }
+
+        @media(max-width: 750px) {
+            font-size: 16px !important ;
+        }
+
+        @media(max-width: 500px) {
+            width: 100%;
+            justify-content: center;
+            font-size: 12px !important;
+        }
+    }
+
+    &_content {
+        width: calc(50% - 20px);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media(max-width: 1400px) {
+            width: calc(80% - 20px);
+        }
+
+        @media(max-width: 750px) {
+            font-size: 16px !important;
+            width: 100%;
+        }
+
+        @media(max-width: 500px) {
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        &_first {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 8px;
+
+            @media(max-width: 500px) {
+                justify-content: center;
+            }
+
+            img {
+                rotate: -90deg;
+
+                @media(max-width: 500px) {
+                    width: 10px;
+                }
+            }
+        }
+    }
+}

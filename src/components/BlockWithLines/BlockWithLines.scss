@@ -1,0 +1,50 @@
+.BlockWithLines{
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #424242;
+    border-bottom: 1px solid #424242;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    justify-content: end;
+    @media(max-width: 1100px){
+        border: 0px;
+        justify-content: center !important;
+    }
+    &_left{
+        left: 0px;
+        justify-content: start;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    &_content{
+        padding: 32px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1000px;
+        width: 100%;
+        border: 1px solid #424242;
+        &_title{
+            font-size: 40px;
+            text-align: left;
+            @media(max-width: 550px){
+                font-size: 32px;
+            }
+        }
+        &_text{
+            font-size: 24px;
+            text-align: left;
+            @media(max-width: 550px){
+                font-size: 16px;
+            }
+        }
+    }
+}

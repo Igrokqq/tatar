@@ -1,0 +1,78 @@
+.Sectors {
+    height: 100vh;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 120px;
+    flex-wrap: wrap;
+
+    @media(max-width: 900px) {
+        padding: 0px !important;
+    }
+
+    &_header {
+        text-align: center;
+        width: 100%;
+    }
+
+    &_content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 100vh;
+        max-height: 1000px;
+        flex-wrap: wrap;
+
+        @media(max-width: 900px) {
+            max-height: 80vh;
+        }
+    }
+
+    &_element {
+        width: 100% !important;
+
+        // transition: transform 50ms, opacity 50ms;
+    }
+
+    .BlockTitle {
+        width: 100%;
+    }
+
+    &_headerAndProgress {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+
+        @media(max-width: 900px) {
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .BlockTitle {
+                width: 100%;
+                // font-size: 28px;
+            }
+        }
+
+    }
+
+    &_progressBar {
+        width: 500px;
+        max-width: 90vw;
+        height: 10px;
+        background: #fff2;
+        border-radius: 8px;
+
+        &_inner {
+            border-radius: 8px;
+            width: 20%;
+            background: #fff;
+            // box-shadow: 0px 0px 20px #fff;
+            height: 10px;
+        }
+    }
+}

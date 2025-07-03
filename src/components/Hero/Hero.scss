@@ -1,0 +1,290 @@
+.Hero {
+    position: relative;
+
+    &_video {
+        display: flex;
+        justify-content: center;
+
+        &_w {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        &_wrapper {
+            top: -80px;
+            width: 100% !important;
+            align-items: baseline !important;
+
+            video {
+                min-height: 100vh !important
+            }
+        }
+
+        &_fade {
+            &Top {
+                z-index: 99;
+                min-height: 200px;
+                width: 100%;
+                background: linear-gradient(to bottom, #000, #0000);
+
+                &_wrapper {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    &_inactive {
+        padding: 0px !important;
+    }
+
+    &_canBeHided {
+        transition: opacity 500ms;
+        opacity: 1;
+
+        &_hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &_slider {
+        width: 100% !important;
+        align-items: start !important;
+        top: -75px;
+        opacity: 1;
+        transition: opacity 500ms;
+
+        &_hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &_inner {
+            // min-width: 100vw;
+            min-height: 100vh;
+            // background: #fff2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+            padding: 0px 24px;
+
+            @media(max-width: 650px) {
+                gap: 16px;
+            }
+        }
+
+        &_content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+
+            &_text {
+                width: 100%;
+                transition: opacity 300ms;
+                opacity: 1;
+
+                &_inner {
+
+                    width: fit-content;
+                    background: #fff8;
+                    padding: 20px;
+                    border-radius: 20px;
+                    backdrop-filter: blur(4px);
+
+                    @media(max-width: 650px) {
+                        padding: 12px;
+                    }
+                }
+
+                &_hide {
+                    opacity: 0 !important;
+                }
+
+                &_header {
+                    font-weight: 500;
+                    max-width: 557px;
+
+                    @media(max-width: 650px) {
+                        font-size: 32px !important;
+                        text-align: center;
+                    }
+
+                    // text-shadow: 0px 0px 20px #000, 0px 0px 4px #000;
+
+                    // &_light {
+                    //     text-shadow: 0px 0px 20px #fff, 0px 0px 4px #fff !important;
+                    // }
+                }
+
+                &_desc {
+                    width: 100%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    max-width: 557px;
+                    margin-top: 8px;
+
+                    @media(max-width: 650px) {
+                        font-size: 18px;
+                        text-align: center;
+                    }
+
+                    // text-shadow: 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 50px #000, 0px 0px 4px #000;
+
+                    // &_light {
+                    //     text-shadow: 0px 0px 20px #fff, 0px 0px 20px #fff, 0px 0px 50px #fff, 0px 0px 4px #fff;
+                    // }
+                }
+
+                &_btn {
+                    margin-top: 48px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+
+                    @media(max-width: 650px) {
+                        margin-top: 24px;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    &_fade {
+        align-items: end !important;
+        width: 100% !important;
+        position: relative;
+        z-index: 9;
+        top: 3px;
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        /* Запускает аппаратное ускорение */
+
+        // &_inner {
+        //     min-height: 250px;
+        //     min-width: 100vw;
+        //     background: linear-gradient(to top, #000, #0000);
+        // }
+
+        &_light {
+            font-size: 20px;
+
+            .Hero_fade_inner {
+                background: linear-gradient(to top, #000, #0008 70%, #0000) !important;
+            }
+        }
+
+    }
+
+    &_canvas {
+        width: 100% !important;
+        top: -75px;
+        align-items: baseline !important;
+
+        &_inner {
+            min-height: 100vh;
+            min-width: 100vw;
+            max-height: 100vh;
+            max-width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+
+            video {
+                // width: 100%;
+                height: 100vh;
+            }
+
+            &_canvas {
+                min-height: 100vh;
+                max-height: 100vh;
+                height: 100vh !important;
+            }
+        }
+    }
+
+    &_content {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        min-height: calc(100vh - 76px);
+        padding-bottom: 30px !important;
+        position: relative;
+        z-index: 10;
+
+        &_left {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media(max-width: 600px) {
+                justify-content: center;
+                width: 100%;
+            }
+
+            &_title {
+                width: 100%;
+                // text-shadow: 0px 0px 4px #fff, 0px 0px 20px #fff;
+                // text-shadow: 0px 0px 20px #000;
+
+                @media(max-width: 600px) {
+                    text-align: center;
+                    font-size: 40px !important;
+                }
+            }
+
+            &_text {
+                width: 100%;
+
+                @media(max-width: 600px) {
+                    font-size: 20px !important;
+                    text-align: center;
+                }
+            }
+        }
+
+        &_right {
+            width: 30%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            @media(max-width: 1000px) {
+                display: none;
+            }
+
+            &_content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                font-size: 24px;
+                opacity: .6;
+                font-weight: 200;
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    &_list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+}

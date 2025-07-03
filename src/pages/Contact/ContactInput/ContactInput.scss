@@ -1,0 +1,34 @@
+.ContactInput {
+    width: calc(50% - 66px);
+    padding: 16px 26px;
+    background-color: rgba($color: #FFF, $alpha: .02);
+    outline: none;
+    border: 1px solid var(--bg-border);
+    border-radius: 10px;
+    color: #000;
+    font-weight: 400;
+    font-size: 24px;
+    resize: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    transition: color 300ms, background-color 300ms, border 300ms;
+
+    // min-width: 220px;
+    @media(max-width: 600px) {
+        width: 100%;
+    }
+
+    &:focus {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #0008;
+    }
+
+    &_big {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+}

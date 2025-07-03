@@ -1,0 +1,67 @@
+.NumBlock{
+    width: calc(45% - 100px);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-width: 300px;
+    @media(max-width: 1400px){
+        width: 90%;
+    }
+    &_num{
+        font-size: 260px;
+        font-weight: 400;
+        width: 30%;
+        @media(max-width: 700px){
+            font-size: 120px;
+        }
+        @media(max-width: 400px){
+            min-width: 20px;
+        }
+        &_first{
+            left: -50px !important;
+            @media(max-width: 1000px){
+                left: 0px !important;
+            }
+        }
+    }
+    &_content{
+        width: 90%;
+        padding: 32px;
+        border-radius: 20px;
+        border: 1px solid #424242;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 24px;
+        min-width: 250px;
+        min-height: 400px;
+        @media(max-width: 1400px){
+            min-height: 400px;
+        }
+        @media(max-width: 1150px){
+            min-height: 600px;
+        }
+        @media(max-width: 1000px){
+            min-height: 400px;
+            justify-content: center;
+        }
+        @media(max-width: 700px){
+            min-height: 250px;
+        }
+        &_title{
+            font-size: 40px;
+            font-weight: 400;
+            width: 100%;
+            @media(max-width: 700px){
+                font-size: 24px;
+            }
+        }
+        &_text{
+            font-size: 24px;
+            @media(max-width: 700px){
+                font-size: 16px;
+            }
+        }
+    }
+}

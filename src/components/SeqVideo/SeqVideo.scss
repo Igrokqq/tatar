@@ -1,0 +1,15 @@
+.HeroVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_fullscreen {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    &_element {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+}

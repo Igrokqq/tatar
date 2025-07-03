@@ -54,7 +54,8 @@ export default observer(() => {
     return (
         <>
             <SubPageVideo
-                path="heroVidGop1V2.mp4"
+                path="/heroVidGop1V2.mp4"
+                pathLoop="/heroLoop2.mp4"
             />
             <div className={`Hero ${mainPageStore.currentSlide !== -1 && 'Hero_inactive'}`}>
 

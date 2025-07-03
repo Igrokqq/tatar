@@ -12,7 +12,6 @@ class MainPageStore {
 
     nextSlide() {
         if (this.slidePlaying) return
-        this.slidePlaying = true
         this.currentSlide = this.currentSlide + 1
         this.direction = 1
     }
@@ -20,12 +19,13 @@ class MainPageStore {
     prevSlide() {
         if (this.slidePlaying) return
         if (this.currentSlide === 0) return
-        this.slidePlaying = true
         this.currentSlide = this.currentSlide - 1
         this.direction = -1
     }
 
     end() {
+        console.log('END');
+
         this.currentSlide = -1;
     }
 }

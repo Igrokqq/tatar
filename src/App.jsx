@@ -76,6 +76,8 @@ function App() {
     }
   }, [mainPageStore.currentSlide]);
 
+  return <>kotiki kotyatki</>
+
   return (
     <div className='App' ref={wrapperRef}>
 

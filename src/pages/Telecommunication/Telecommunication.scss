@@ -1,0 +1,88 @@
+.Telecom {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    &.container {
+        padding: 200px 0px;
+        margin-bottom: -15px;
+
+        @media(max-width: 1600px) {
+            padding: 150px 0px;
+        }
+    }
+
+    &_content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 40px;
+        padding: 0 !important;
+    }
+
+    &_hero {
+        width: 100%;
+        min-height: calc(100vh - 75px);
+
+        position: relative;
+        z-index: 2;
+
+
+        @media(max-width: 900px) {
+            flex-wrap: wrap;
+        }
+
+        &_decor {
+            align-items: center !important;
+            z-index: -1;
+            width: 100vw !important;
+            position: absolute !important;
+            top: 50vh;
+            // opacity: .2;
+
+            video,
+            img,
+            canvas {
+                width: 100%;
+                min-height: 100vh;
+                object-fit: cover;
+
+            }
+
+        }
+    }
+
+    &_info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 40px;
+        flex-wrap: wrap;
+        max-width: 1900px;
+
+        &_el {
+            padding: 37px;
+            width: calc(100% / 3 - 40px);
+            border-radius: 50px;
+            border: 1px solid var(--bg-border);
+            min-width: 450px;
+
+            @media(max-width: 1700px) {
+                width: calc(100% / 2 - 40px);
+            }
+
+            @media(max-width: 1000px) {
+                width: 100%;
+            }
+
+            @media(max-width: 500px) {
+                font-size: 16px !important;
+                min-width: 300px;
+            }
+        }
+    }
+}

@@ -1,10 +1,15 @@
 import BlockTitle from '../../components/BlockTitle/BlockTitle';
 import BlockWithLines from '../../components/BlockWithLines/BlockWithLines';
-import HeaderHeroPageEl from '../../components/HeaderHeroPageEl/HeaderHeroPageEl';
+import HeadingHeroPageEl from "../../components/HeadingHeroPageEl/HeadingHeroPageEl.jsx";
 import SubPageDecor from '../../components/SubPageDecor/SubPageDecor';
 import './Digital.scss';
+import BlockWithText from "../../components/BlockWithText/BlockWithText.jsx";
+import SubPlayerLoop from "../../components/SubPageDecor/SubPlayerLoop.jsx";
+import SubPageVideo from "../../components/SubPageDecor/SubPageVideo.jsx";
+import { useTranslation } from "react-i18next";
+import BigNumBlock from "../../components/BigNumBlock/BigNumBlock.jsx";
 export default () => {
-
+    const { t } = useTranslation();
     const els = [
         {
             title: 'Investments in Technological Infrastructure',
@@ -40,15 +45,53 @@ export default () => {
                 frameCount={105}
                 basePath={'/sectorsSequences/DigitalLarge/'}
             />
-            <HeaderHeroPageEl bg={'/1.webp'} title={'Digital'} text={'Expanding the Backbone of the Digital Economy'} description={'We’ve been building our digital infrastructure since 2016 — systematically, purposefully, and always with a product-first mindset. Today, we invest in and develop broadband networks, fiber-optic systems, cloud platforms, and AI-driven tools that serve as critical infrastructure for the next generation of global business.'} />
+
+            <HeadingHeroPageEl title={'Digital'} smallTitle={'Hello'} />
+            {/*<HeaderHeroPageEl bg={'/1.webp'} title={'Digital'} text={'Expanding the Backbone of the Digital Economy'} description={'We’ve been building our digital infrastructure since 2016 — systematically, purposefully, and always with a product-first mindset. Today, we invest in and develop broadband networks, fiber-optic systems, cloud platforms, and AI-driven tools that serve as critical infrastructure for the next generation of global business.'} />*/}
             <div className='Digital container'>
-                <BlockTitle text1={'Our IT Focus'} />
+                <BlockTitle text1={'Our IT Focus'}/>
                 <div className='Digital_content'>
-                    {
-                        els.map((el, index) => (
-                            <BlockWithLines title={el.title} text={el.text} text2={el.text2} left={el.left} index={index + 1} key={`BlockWithLines_${index}`} />
-                        ))
-                    }
+                    {/*<SubPlayerLoop*/}
+                    {/*  forwardSrc="video/Digital.mp4"*/}
+                    {/*  reverseSrc="video/reverse_Digital.mp4"*/}
+                    {/*  autoPlay={true}*/}
+                    {/*  hoverPlay={false}*/}
+                    {/*  withLight={true}*/}
+                    {/*  rounded={true}*/}
+                    {/*/>*/}
+                    <div className='RealEstate_info mt_xl'>
+                        {/*{*/}
+                        {/*    [t('info_1'), t('info_2'), t('info_3')].map((el, index) => (*/}
+                        {/*      <div className='RealEstate_info_el gradienBlock fs_m fsw_s'*/}
+                        {/*           key={`RealEstate_info_el_${index}`}>*/}
+                        {/*          {el}*/}
+                        {/*      </div>*/}
+                        {/*    ))*/}
+                        {/*}*/}
+
+                        {/*<div className='Digital_steps mt_xl'>*/}
+                        {/*    <div className='Digital_steps_title fs_2xl fsw_m'>*/}
+                        {/*        {t('guiding_principles')}*/}
+                        {/*    </div>*/}
+                        {/*    <div className='RealEstate_steps_content mt_m'>*/}
+                        {/*        {*/}
+                        {/*            els.map((el, index) => (*/}
+                        {/*              <BigNumBlock index={index} title={el.title} text={el.text}*/}
+                        {/*                           key={`BigNumBlock_${index + 2}`}/>*/}
+                        {/*            ))*/}
+                        {/*        }*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+
+                        {
+                            els.map((el, index) => (
+                              // <BlockWithLines title={el.title} text={el.text} text2={el.text2} left={el.left} index={index + 1} key={`BlockWithLines_${index}`} />
+                              <BlockWithText title={el.title} text={el.text} text2={el.text2} left={el.left}
+                                             index={index + 1} key={`BlockWithLines_${index}`}/>
+                            ))
+                        }
+                    </div>
+
                 </div>
             </div>
         </>

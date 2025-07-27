@@ -11,6 +11,12 @@
     // padding-top: 70px !important;
     padding-bottom: 30px !important;
     // margin-top: 60px !important;
+    background: var(--bg-color);
+    max-width: 100% !important;
+
+    &_light {
+        background: var(--bg-color);
+    }
 
     &_content {
         display: flex;

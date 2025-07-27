@@ -7,7 +7,7 @@ import { themeStore } from "../../stores/themeStore.js";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default ({ title, text, text2, left, center, index }) => {
+export default ({ title, text, text2, left, center, index, className }) => {
     const blockRef = useRef(null);
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export default ({ title, text, text2, left, center, index }) => {
     }, []);
     
     return (
-    <div className={`BlockDividerText ${!themeStore.isLight && 'BlockDividerText_light'}  BlockDividerText ${left && 'BlockDividerText_left'} ${left && 'BlockDividerText_center'}`}  ref={blockRef}>
+    <div className={`BlockDividerText ${className} ${!themeStore.isLight && 'BlockDividerText_light'}  BlockDividerText ${left && 'BlockDividerText_left'} ${left && 'BlockDividerText_center'}`}  ref={blockRef}>
         <div className={`BlockDividerText_content ${left && 'BlockDividerText_content_left'} ${center && 'BlockDividerText_content_center'}`}>
             <div className='BlockDividerText_content_title'>
                 {title}

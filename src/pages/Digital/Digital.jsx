@@ -1,12 +1,9 @@
-import BlockTitle from '../../components/BlockTitle/BlockTitle';
 import HeadingHeroPageEl from "../../components/HeadingHeroPageEl/HeadingHeroPageEl.jsx";
 import SubPageDecor from '../../components/SubPageDecor/SubPageDecor';
 import SubPagePlayer from "../../components/SubPageDecor/SubPagePlayer.jsx";
 import './Digital.scss';
 import BlockWithText from "../../components/BlockWithText/BlockWithText.jsx";
-import { useTranslation } from "react-i18next";
 import BlockDividerText from "../../components/BlockDividerText/BlockDividerText.jsx";
-import { themeStore } from "../../stores/themeStore.js";
 export default () => {
     const els = [
         {

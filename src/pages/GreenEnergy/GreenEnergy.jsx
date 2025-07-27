@@ -1,28 +1,11 @@
-import BlockTitle from '../../components/BlockTitle/BlockTitle';
-import BlockWithLines from '../../components/BlockWithLines/BlockWithLines';
-import HeaderHeroPageEl from '../../components/HeaderHeroPageEl/HeaderHeroPageEl';
-import TextBlock from '../../components/TextBlock/TextBlock';
 import './GreenEnergy.scss';
-import SeqVideo from '../../components/SeqVideo/SeqVideo';
 import SubPageDecor from '../../components/SubPageDecor/SubPageDecor';
+import HeadingHeroPageEl from "../../components/HeadingHeroPageEl/HeadingHeroPageEl.jsx";
+import BlockDividerText from "../../components/BlockDividerText/BlockDividerText.jsx";
+import SubPagePlayer from "../../components/SubPageDecor/SubPagePlayer.jsx";
+import BlockWithText from "../../components/BlockWithText/BlockWithText.jsx";
 export default () => {
-
     const els = [
-        {
-            title: 'Our Foundation: Renewable Infrastructure',
-            text: 'From solar parks and wind farms to battery storage and hydrogen installations — we build and operate sustainable energy systems that form the backbone of tomorrow’s power supply. Our platforms are engineered for the mass production of clean, high-efficiency electricity — with a focus on long-term stability and minimal environmental impact.'
-        },
-        {
-            title: 'What Sets Us Apart: Intelligent Energy Design',
-            text: 'We don’t just deploy energy assets — we design adaptive, modular systems. Our focus is scalable clean energy infrastructure with integrated storage, intelligent grid logic, and predictive management. Each asset is optimized for output, resilience, and long-term strategic value.'
-        },
-        {
-            title: 'How We Operate',
-            text: 'We act as developers with the mindset of energy system architects. Our team combines deep expertise in clean energy with the rigor of infrastructure investment. Every project is designed for future scalability, regulatory compliance, and climate alignment. The result: Energy systems that scale fast, operate reliably, and drive the shift to net-zero.'
-        }
-    ]
-
-    const bottomEls = [
         {
             title: 'Renewable Energy Infrastructure',
             text: 'We develop and operate industrial-scale solar and wind power plants in strategically critical regions. Our projects are designed with a focus on energy efficiency, grid stability, and long-term generation reliability.',
@@ -46,30 +29,35 @@ export default () => {
     ]
 
     return (
-        <>
+      <>
+          <SubPageDecor
+            frameCount={105}
+            basePath={'/sectorsSequences/GreenLarge/'}
+          />
+          <HeadingHeroPageEl title={'Green Energy'}/>
+          <BlockDividerText
+            className={'GreenEnergy'}
+            center
+            title={'Driving Scalable Renewable Power'}
+            text={'We fund solar, wind, battery, and hydrogen platforms — targeting efficiency, sustainability, and global impact.'}
+          />
+          <div className='GreenEnergy container'>
+              <SubPagePlayer
+                forwardSrc="/video/Green_energy.mp4"
+                reverseSrc="/video/reverse_Green_energy.mp4"
+              />
+              <div className='GreenEnergy_content'>
+                  <div className='GreenEnergy_info mt_xl'>
+                      {
+                          els.map((el, index) => (
+                            <BlockWithText className={'GreenEnergy'} title={el.title} text={el.text} text2={el.text2} left={el.left}
+                                           index={index + 1} key={`BlockWithLines_${index}`}/>
+                          ))
+                      }
+                  </div>
 
-            <SubPageDecor
-                frameCount={110}
-                basePath={'/sectorsSequences/GreenLarge/'}
-            />
-            <HeaderHeroPageEl bg={'/1.webp'} title={'Green Energy'} text={'Investing in the Future of Clean Energy'} description={'Since 2017, we’ve been investing in scalable, resilient energy infrastructure — including industrial-scale solar power plants, onshore and offshore wind farms, battery storage systems, and hydrogen facilities.'} description2={'Our mission is to accelerate the transition to renewable energy sources by building clean energy platforms that ensure long-term efficiency, environmental sustainability, and global impact.'} smallTitle />
-            <div className='GreenEnergy container'>
-                <div className='GreenEnergy_content'>
-                    {
-                        els.map((el, index) => (
-                            <TextBlock title={el.title} text={el.text} key={`TextBlock_${index}`} />
-                        ))
-                    }
-                </div>
-                <BlockTitle text1={'What We Build in'} text2={'Clean Energy'} />
-                <div className='GreenEnergy_content'>
-                    {
-                        bottomEls.map((el, index) => (
-                            <BlockWithLines title={el.title} text={el.text} text2={el.text2} left={el.left} index={index + 1} key={`BlockWithLines_${index}`} />
-                        ))
-                    }
-                </div>
-            </div>
-        </>
+              </div>
+          </div>
+      </>
     )
 }

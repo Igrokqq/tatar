@@ -21,7 +21,7 @@ import { autorun } from 'mobx';
 import { themeStore } from './stores/themeStore';
 import { useEffect, useLayoutEffect, useRef } from "react";
 import Digital from "./pages/Digital/Digital.jsx";
-import Telecomunication from "./pages/Telecomunication/Telecomunication.jsx";
+import Telecomunication from "./pages/Telecommunication/Telecommunication.jsx";
 import GreenEnergy from "./pages/GreenEnergy/GreenEnergy.jsx";
 import Water from "./pages/Water/Water.jsx";
 import Energy from "./pages/Energy/Energy.jsx";

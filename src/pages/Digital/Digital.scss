@@ -1,15 +1,48 @@
-.Digital{
+.Digital {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  &_content {
     display: flex;
-    justify-content: center;
-    align-items: start;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     gap: 40px;
-    &_content{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        gap: 40px;
-        padding: 0 !important;
+    padding: 0 !important;
+  }
+
+  &_hero {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+
+    position: relative;
+    z-index: 2;
+
+
+    @media(max-width: 900px) {
+      flex-wrap: wrap;
     }
+
+    &_decor {
+      align-items: center !important;
+      z-index: -1;
+      width: 100vw !important;
+      position: absolute !important;
+      top: 50vh;
+      // opacity: .2;
+
+      video,
+      img,
+      canvas {
+        width: 100%;
+        min-height: 100vh;
+        object-fit: cover;
+
+      }
+
+    }
+  }
 }

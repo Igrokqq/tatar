@@ -5,6 +5,15 @@
   flex-wrap: wrap;
   gap: 40px;
 
+
+  &.container {
+    padding: 200px 0px;
+
+    @media(max-width: 1600px) {
+      padding: 150px 0px;
+    }
+  }
+
   &_content {
     display: flex;
     flex-wrap: wrap;
@@ -43,6 +52,37 @@
 
       }
 
+    }
+  }
+
+  &_info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1900px;
+
+    &_el {
+      padding: 37px;
+      width: calc(100% / 3 - 40px);
+      border-radius: 50px;
+      border: 1px solid var(--bg-border);
+      min-width: 450px;
+
+      @media(max-width: 1700px) {
+        width: calc(100% / 2 - 40px);
+      }
+
+      @media(max-width: 1000px) {
+        width: 100%;
+      }
+
+      @media(max-width: 500px) {
+        font-size: 16px !important;
+        min-width: 300px;
+      }
     }
   }
 }

@@ -62,8 +62,8 @@ export default observer(() => {
     };
 
     return (
-        <div className='mt_xl'>
-            < div className={`Footer container ${themeStore.isLight && 'Footer_light'}`
+        // <div className='mt_xl'>
+            <div className={`Footer container ${themeStore.isLight && 'Footer_light'}`
             }>
                 <div className='Footer_content'>
                     {items.map((el, index) => (
@@ -100,6 +100,6 @@ export default observer(() => {
                     </div>
                 </div>
             </div >
-        </div>
+        // </div>
     );
 })

@@ -52,7 +52,7 @@ export default () => {
               text={'We back technologies that boost efficiency and build resilient businesses. IBERIO reflects our approach-scalable software that combines\n' +
                 'adaptability with performance.'}
             />
-            <div className='Digital container ar-16-9'>
+            <div className='Digital container'>
                 <SubPagePlayer
                   forwardSrc="/video/Digital.mp4"
                   reverseSrc="/video/reverse_Digital.mp4"

@@ -1,49 +1,36 @@
 import { useEffect, useRef } from 'react';
-import BigNumBlock from '../../components/BigNumBlock/BigNumBlock';
-import HeaderHeroPageEl from '../../components/HeaderHeroPageEl/HeaderHeroPageEl';
-import TextBlock from '../../components/TextBlock/TextBlock';
 import './Water.scss';
-
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import BlockTitle from '../../components/BlockTitle/BlockTitle';
 import SubPageDecor from '../../components/SubPageDecor/SubPageDecor';
+import HeadingHeroPageEl from "../../components/HeadingHeroPageEl/HeadingHeroPageEl.jsx";
+import BlockDividerText from "../../components/BlockDividerText/BlockDividerText.jsx";
+import SubPagePlayer from "../../components/SubPageDecor/SubPagePlayer.jsx";
+import BlockWithText from "../../components/BlockWithText/BlockWithText.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 export default () => {
-
     const els = [
-        {
-            title: 'Our Foundation: Water Infrastructure',
-            text: 'From treatment plants and desalination facilities to smart pipeline networks and water reuse technologies — we build and manage critical infrastructure for clean water access. Our platforms are engineered for reliability, scalability, and minimal environmental impact — serving both urban and industrial regions.'
-        },
-        {
-            title: 'What Sets Us Apart: Intelligent Utility Design',
-            text: 'We don’t just operate water systems — we optimize them. Our focus is adaptive infrastructure with real-time digital monitoring, leak detection, pressure balancing, and analytics. Every network is designed to improve efficiency, reduce losses, and ensure uninterrupted performance long-term.'
-        },
-        {
-            title: 'How We Operate',
-            text: 'We act as engineers and think like resource stewards. Our team combines deep domain expertise in water systems with the operational mindset of infrastructure investors. Every project we deliver is designed with regulatory compliance, resilience, and recovery efficiency in mind. The result: Water networks that scale for future demand, operate reliably, and meet global sustainability needs.'
-        }
-    ]
-
-    const steps = [
         {
             title: 'Clean Water Infrastructure',
             text: 'We develop and operate large-scale water treatment plants, desalination units, and municipal pipelines across urban and industrial zones. Our projects are designed for long-term operational reliability, environmental safety, and stable water supply.',
+            left: true
         },
         {
             title: 'Smart Water Management & Monitoring',
             text: 'We invest in digital monitoring systems, pressure control tools, and leak detection platforms to improve efficiency, reduce loss, and maintain consistent water flow during peak demand and environmental stress.',
+            left: false
         },
         {
             title: 'Innovative Water Reuse & Circular Systems',
             text: 'Our portfolio includes gray water reuse systems, rainwater harvesting, and pilot filtration technologies — with a focus on regenerative water solutions for the next generation of city infrastructure.',
+            left: true
         },
         {
-            title: 'ESG Integration & Water Security Agreements',
-            text: 'All our assets operate under long-term municipal contracts or public-private partnerships. Our strategy aligns with global ESG principles and responsible water usage — ensuring investments with a positive resource impact and stable value for communities.',
+            title: 'Water Access & Resilience Partnerships',
+            text: 'Global and municipal collaborations ensuring long-term access, climate resilience, and equitable water distribution.',
+            left: false
         }
     ];
 
@@ -82,29 +69,35 @@ export default () => {
     }, { scope: scope })
 
     return (
-        <>
-            <SubPageDecor
-                frameCount={100}
-                basePath={'/sectorsSequences/WaterLarge/'}
-            />
-            <HeaderHeroPageEl bg={'/1.webp'} title={'Water'} text={'Investing in the Future of Clean Water'} description={'Since 2016, we’ve been investing in scalable, resilient water infrastructure — including advanced treatment facilities, waste management systems, and intelligent municipal water networks. Our mission is to support urban growth and industrial efficiency by building water systems that ensure resource sustainability, uninterrupted operation, and long-term ecological resilience.'} />
-            <div className='Water container' ref={scope}>
-                <div className='Water_content'>
-                    {
-                        els.map((el, index) => (
-                            <TextBlock title={el.title} text={el.text} key={`TextBlock_${index}`} />
-                        ))
-                    }
-                </div>
-                <BlockTitle text1={'What We Build in Water'} text2={'Infrastructure'} />
-                <div className='Water_lines'>
-                    {
-                        steps.map((el, index) => (
-                            <BigNumBlock index={index} title={el.title} text={el.text} key={`BigNumBlock_${index + 1}`} />
-                        ))
-                    }
-                </div>
-            </div>
-        </>
+      <>
+          <SubPageDecor
+            frameCount={100}
+            basePath={'/sectorsSequences/WaterLarge/'}
+          />
+          <HeadingHeroPageEl title={'Water'}/>
+          <BlockDividerText
+            className={'Water'}
+            center
+            title={'Scaling Water Treatment Infrastructure'}
+            text={'Backing purification plants and utility-scale systems that deliver clean water with long-term reliability and environmental impact.'}
+          />
+          <div className='Water container'>
+              <SubPagePlayer
+                forwardSrc="/video/Water.mp4"
+                reverseSrc="/video/reverse_Water.mp4"
+              />
+              <div className='Water_content'>
+                  <div className='Water_info mt_xl'>
+                      {
+                          els.map((el, index) => (
+                            <BlockWithText className={'Water'} title={el.title} text={el.text} text2={el.text2} left={el.left}
+                                           index={index + 1} key={`BlockWithLines_${index}`}/>
+                          ))
+                      }
+                  </div>
+
+              </div>
+          </div>
+      </>
     )
 }

@@ -31,11 +31,6 @@ export default () => {
             text: 'The company develops and deploys its own large language models (LLMs) and AI systems for business logic automation, data analysis, and decision optimization.',
             left: false
         },
-        {
-            title: 'Corporate Client Support and B2B Systems',
-            text: 'Targeted towards large corporate partners in need of tailored IT solutions and full-scale digital infrastructure deployment.',
-            left: true
-        }
     ]
 
     return (

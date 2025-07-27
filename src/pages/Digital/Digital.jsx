@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 import BlockDividerText from "../../components/BlockDividerText/BlockDividerText.jsx";
 import { themeStore } from "../../stores/themeStore.js";
 export default () => {
-    const { t } = useTranslation();
     const els = [
         {
             title: 'Investments in Technological Infrastructure',
@@ -40,7 +39,6 @@ export default () => {
                 basePath={'/sectorsSequences/DigitalLarge/'}
             />
             <HeadingHeroPageEl title={'Digital'} smallTitle={'Hello'} />
-            {/*<BlockTitle text1={'Our IT Focus'}/>*/}
             <BlockDividerText
               center
               title={'Algorithms, Scalability, and Infinite Possibility'}
@@ -54,23 +52,8 @@ export default () => {
                 />
                 <div className='Digital_content'>
                     <div className='Digital_info mt_xl'>
-                        {/*<div className='Digital_steps mt_xl'>*/}
-                        {/*    <div className='Digital_steps_title fs_2xl fsw_m'>*/}
-                        {/*        {t('guiding_principles')}*/}
-                        {/*    </div>*/}
-                        {/*    <div className='RealEstate_steps_content mt_m'>*/}
-                        {/*        {*/}
-                        {/*            els.map((el, index) => (*/}
-                        {/*              <BigNumBlock index={index} title={el.title} text={el.text}*/}
-                        {/*                           key={`BigNumBlock_${index + 2}`}/>*/}
-                        {/*            ))*/}
-                        {/*        }*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-
                         {
                             els.map((el, index) => (
-                              // <BlockWithLines title={el.title} text={el.text} text2={el.text2} left={el.left} index={index + 1} key={`BlockWithLines_${index}`} />
                               <BlockWithText title={el.title} text={el.text} text2={el.text2} left={el.left}
                                              index={index + 1} key={`BlockWithLines_${index}`}/>
                             ))

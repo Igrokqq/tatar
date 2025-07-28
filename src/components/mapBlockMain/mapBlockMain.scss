@@ -32,6 +32,7 @@
         justify-content: center;
         gap: 24px;
         flex-wrap: wrap;
+        padding-left: 2em;
 
         @media(max-width: 1000px) {
             width: 100%;
@@ -43,7 +44,6 @@
             display: flex;
             justify-content: end;
             gap: 42px;
-            padding-left: 100px;
 
             @media(max-width: 1000px) {
                 padding-left: 0;

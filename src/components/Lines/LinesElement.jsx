@@ -72,7 +72,7 @@ export default ({ index, el, hovered }) => {
                 setleaveTrigger(Math.random())
             }}
             style={{
-                filter: `brightness(${(hovered === -1) || (hovered === index) ? 1 : .5})`
+                // filter: `brightness(${(hovered === -1) || (hovered === index) ? 1 : .5})`
             }}
         >
 

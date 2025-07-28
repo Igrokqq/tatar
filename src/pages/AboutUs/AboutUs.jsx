@@ -190,28 +190,28 @@ export default () => {
                 }} />
                 <AboutUsMapDecorBlock config={{
                     city: 'Paderborn',
-                    country: 'Germnay',
+                    country: 'Germany',
                     address: 'Address',
                     img: '/img/map/3.webp',
                     textPos: 'center',
                     position: {
                         x: -.043,
-                        y: -.115,
+                        y: -.105,
                     }
                 }} />
                 <AboutUsMapDecorBlock config={{
                     city: 'Munich',
-                    country: 'Germnay',
+                    country: 'Germany',
                     address: 'Address',
                     img: '/img/map/4.webp',
                     position: {
                         x: -.035,
-                        y: -.09,
+                        y: -.063,
                     }
                 }} />
                 <AboutUsMapDecorBlock config={{
                     city: 'Hong Kong',
-                    country: 'China',
+                    country: '',
                     address: 'Address',
                     img: '/img/map/5.webp',
                     textPos: 'left',

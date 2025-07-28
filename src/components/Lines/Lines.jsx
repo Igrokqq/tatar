@@ -56,7 +56,7 @@ export default () => {
                         onMouseLeave={() => sethovered(-1)}
                         style={{
                             position: 'relative',
-                            zIndex: index < 3 ? 10 : 0
+                            zIndex: index === 2 ? 9 : index < 3 ? 10 : 0
                         }}
                     >
                         <LinesElement index={index} el={el} hovered={hovered} />

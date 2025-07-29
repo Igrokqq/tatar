@@ -35,3 +35,18 @@
 .video-base.visible {
   opacity: 0.4; // или 1
 }
+
+.map-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.map-video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}

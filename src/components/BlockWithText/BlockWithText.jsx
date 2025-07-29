@@ -6,13 +6,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default ({ title, text, text2, left, index }) => {
-    
+export default ({ title, text, text2, bot }) => {
     const blockRef = useRef(null);
 
     useEffect(() => {
-        const direction = index % 2 === 0 ? -200 : 200;
-
+        const direction = 0
         gsap.fromTo(
         blockRef.current,
         {
@@ -26,19 +24,19 @@ export default ({ title, text, text2, left, index }) => {
             ease: 'power3.out',
             scrollTrigger: {
             trigger: blockRef.current,
-            start: 'top 70%',
+            start: 'top 67%',
             },
         }
         );
     }, []);
-    
+
     return (
-    <div className={`BlockWithText ${left && 'BlockWithText_left'}`}  ref={blockRef}>
-        <div className={`BlockWithText_content ${left && 'BlockWithText_content_left'}`}>
+    <div className={`BlockWithText ${bot && 'BlockWithText_bot'}`} ref={blockRef}>
+        <div className={`BlockWithText_content ${bot && 'BlockWithText_content_bot'}`}>
             <div className='BlockWithText_content_title'>
                 {title}
             </div>
-            <div className={`BlockWithText_content_text ${left && 'BlockWithText_content_text_left'}`}>
+            <div className={`BlockWithText_content_text ${bot && 'BlockWithText_content_text_bot'}`}>
                 {text}
             </div>
             {

@@ -30,7 +30,13 @@ export default () => {
 
     const keypointsEl = [
         {
+            city: 'München'
+        },
+        {
             city: 'New York'
+        },
+        {
+            city: 'Hong Kong'
         },
         {
             city: 'Paderborn'
@@ -38,12 +44,7 @@ export default () => {
         {
             city: 'Düsseldorf'
         },
-        {
-            city: 'München'
-        },
-        {
-            city: 'Hong Kong'
-        }
+
     ]
 
     // useEffect(() => {

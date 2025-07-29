@@ -9,23 +9,23 @@ export default () => {
         {
             title: 'Investments in Technological Infrastructure',
             text: 'The company allocates resources to build scalable, reliable IT systems — including proprietary tools for management, software platforms, and network solutions.',
-            left: true
+            left: true,
         },
         {
             title: 'In-House Product Development',
             text: 'Custom systems for automation are created — tools for incident management, operations tracking, and financial process monitoring.',
             text2: 'Example: The proprietary platform IBERIO, functioning as the company`s digital `Operational Brain`',
-            left: false
+            left: false,
         },
         {
             title: 'Focus on Scalability and Adaptability',
             text: 'All IT solutions are built for long-term stability, ease of scaling, reliable performance under high loads, and flexibility in constantly evolving business environments.',
-            left: true
+            left: true,
         },
         {
             title: 'Integration of AI and LLMs',
             text: 'The company develops and deploys its own large language models (LLMs) and AI systems for business logic automation, data analysis, and decision optimization.',
-            left: false
+            left: false,
         },
     ]
 
@@ -55,7 +55,6 @@ export default () => {
                             ))
                         }
                     </div>
-
                 </div>
             </div>
         </>

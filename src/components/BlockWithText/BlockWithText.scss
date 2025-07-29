@@ -3,13 +3,18 @@
     position: relative;
     display: flex;
     justify-content: end;
+    transform: translateY(-200);
     @media(max-width: 1100px){
         justify-content: center !important;
     }
 
-    &_left{
+    &:nth-of-type(odd) {
         left: 0px;
         justify-content: start;
+    }
+
+    &_bot{
+        transform: translateY(0);
     }
 
     &_content{

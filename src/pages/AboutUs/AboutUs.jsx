@@ -183,6 +183,7 @@ export default () => {
                     address: 'Address',
                     video: '/video/map/Dusseldorf.mp4',
                     textPos: 'left',
+                    mode: 'end-stop',  // или 'end-image'
                     position: {
                         x: -.055,
                         y: -.095,
@@ -194,6 +195,7 @@ export default () => {
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
                     textPos: 'center',
+                    mode: 'end-stop',  // или 'end-image'
                     position: {
                         x: -.043,
                         y: -.105,
@@ -203,7 +205,8 @@ export default () => {
                     city: 'Munich',
                     country: 'Germany',
                     address: 'Address',
-                    video: '/video/map/Padderborn.mp4',
+                    video: '/video/map/Munich.mp4',
+                    mode: 'end-stop',  // или 'end-image'
                     position: {
                         x: -.035,
                         y: -.063,

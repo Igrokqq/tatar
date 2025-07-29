@@ -44,8 +44,7 @@ export default () => {
             />
             <div className='Digital container'>
                 <SubPagePlayer
-                  forwardSrc="/video/Digital.mp4"
-                  reverseSrc="/video/reverse_Digital.mp4"
+                  src="/video/Digital_loop.mp4"
                 />
                 <div className='Digital_content'>
                     <div className='Digital_info mt_xl'>

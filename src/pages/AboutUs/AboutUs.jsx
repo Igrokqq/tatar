@@ -172,6 +172,7 @@ export default () => {
                     country: 'USA',
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
+                    poster: '/img/map/1.webp',
                     position: {
                         x: -.43,
                         y: 0.01,
@@ -182,6 +183,7 @@ export default () => {
                     country: 'Germany',
                     address: 'Address',
                     video: '/video/map/Dusseldorf.mp4',
+                    poster: '/img/map/2.webp',
                     textPos: 'left',
                     position: {
                         x: -.055,
@@ -193,6 +195,7 @@ export default () => {
                     country: 'Germany',
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
+                    poster: '/img/map/3.webp',
                     textPos: 'center',
                     position: {
                         x: -.043,
@@ -204,6 +207,7 @@ export default () => {
                     country: 'Germany',
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
+                    poster: '/img/map/4.webp',
                     position: {
                         x: -.035,
                         y: -.063,
@@ -214,6 +218,7 @@ export default () => {
                     country: '',
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
+                    poster: '/img/map/5.webp',
                     textPos: 'left',
                     position: {
                         x: .455,

@@ -43,8 +43,7 @@ export default () => {
           />
           <div className='GreenEnergy container'>
               <SubPagePlayer
-                forwardSrc="/video/Green_energy.mp4"
-                reverseSrc="/video/reverse_Green_energy.mp4"
+                src="/video/Green_energy_loop.mp4"
               />
               <div className='GreenEnergy_content'>
                   <div className='GreenEnergy_info mt_xl'>

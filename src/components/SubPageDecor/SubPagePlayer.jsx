@@ -1,6 +1,6 @@
 import './SubPageDecor.scss';
 
-export default function SubPageVideo({ src , className = '' }) {
+export default function SubPagePlayer({ src , className = '' }) {
 
   return (
     <video

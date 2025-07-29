@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './AboutUsMapDecorBlock.scss';
 import Circle from './Circle';
+import SubPagePlayer from "../../components/SubPageDecor/SubPagePlayer.jsx";
 export default ({ config }) => {
 
     const [x, setx] = useState('0px');
@@ -67,9 +68,8 @@ export default ({ config }) => {
                 </div>
             </div>
             <div className={`AboutUsMapDecorBlock_mm_wrapper  ${config?.textPos === 'left' && 'AboutUsMapDecorBlock_mm_wrapper_left'} free_img`}>
-                <div className={`AboutUsMapDecorBlock_mm ${openModal && 'AboutUsMapDecorBlock_mm_active'}`} style={{
-                    backgroundImage: `url(${config.img})`
-                }}>
+                <div className={`AboutUsMapDecorBlock_mm ${openModal && 'AboutUsMapDecorBlock_mm_active'}`}>
+                    <SubPagePlayer src={config.video}/>
                     <div className='AboutUsMapDecorBlock_mm_text'>
                         <div className='AboutUsMapDecorBlock_mm_text_title fs_xl fsw_m'>{config.city}</div>
                         <div className='AboutUsMapDecorBlock_mm_text_description fs_l fsw_s'>{config.address}</div>

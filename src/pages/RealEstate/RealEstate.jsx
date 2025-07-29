@@ -8,11 +8,8 @@ import { useTranslation } from 'react-i18next';
 import { observer } from 'mobx-react-lite';
 import { themeStore } from '../../stores/themeStore';
 import { useGSAP } from '@gsap/react';
-import PageHeader from '../../components/PageHeader/PageHeader';
 import BigNumBlock from '../../components/BigNumBlock/BigNumBlock';
 import HeaderHeroPageEl from '../../components/HeaderHeroPageEl/HeaderHeroPageEl';
-import SectorsElement from '../../components/Sectors/SectorsElement';
-import FramePlayer from '../../components/FramePlayer/FramePlayer';
 import SubPageDecor from '../../components/SubPageDecor/SubPageDecor';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -155,10 +152,6 @@ export default observer(() => {
 
 
     }, { scope: scope })
-
-
-
-
 
 
     return (

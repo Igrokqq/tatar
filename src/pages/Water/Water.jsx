@@ -83,8 +83,7 @@ export default () => {
           />
           <div className='Water container'>
               <SubPagePlayer
-                forwardSrc="/video/Water.mp4"
-                reverseSrc="/video/reverse_Water.mp4"
+                src="/video/Water_loop.mp4"
               />
               <div className='Water_content'>
                   <div className='Water_info mt_xl'>

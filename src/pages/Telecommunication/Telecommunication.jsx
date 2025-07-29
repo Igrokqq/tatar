@@ -43,8 +43,7 @@ export default () => {
           />
           <div className='Telecom container'>
               <SubPagePlayer
-                forwardSrc="/video/Telecom.mp4"
-                reverseSrc="/video/reverse_Telecom.mp4"
+                src="/video/Telecom_loop.mp4"
               />
               <div className='Telecom_content'>
                   <div className='Telecom_info mt_xl'>

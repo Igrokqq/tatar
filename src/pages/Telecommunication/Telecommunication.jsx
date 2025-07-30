@@ -29,34 +29,34 @@ export default () => {
     ]
 
     return (
-      <>
-          <SubPageDecor
-            frameCount={97}
-            basePath={'/sectorsSequences/TelecomLarge/'}
-          />
-          <HeadingHeroPageEl title={'Telecommunication'}/>
-          <BlockDividerText
-            className={'Telecom'}
-            center
-            title={'Expanding Critical Telecommunication Networks'}
-            text={'Investing in fiber, satellite, and 5G infrastructure to enable seamless connectivity, digital inclusion, and national-scale data resilience.'}
-          />
-          <div className='Telecom container'>
-              <SubPagePlayer
-                src="/video/Telecom_loop.mp4"
-              />
-              <div className='Telecom_content'>
-                  <div className='Telecom_info mt_xl'>
-                      {
-                          els.map((el, index) => (
-                            <BlockWithText className={'Telecom'} title={el.title} text={el.text} text2={el.text2} left={el.left}
-                                           index={index + 1} key={`BlockWithLines_${index}`}/>
-                          ))
-                      }
-                  </div>
+        <>
+            <SubPageDecor
+                frameCount={97}
+                basePath={'/sectorsSequences/TelecomLarge/'}
+            />
+            <HeadingHeroPageEl title={'Telecommunication'} />
+            <BlockDividerText
+                className={'Telecom'}
+                center
+                title={'Expanding Critical Telecommunication Networks'}
+                text={'Investing in fiber, satellite, and 5G infrastructure to enable seamless connectivity, digital inclusion, and national-scale data resilience.'}
+            />
+            <div className='Telecom container'>
+                <SubPagePlayer
+                    src="/video/Telecom_loop.mp4"
+                />
+                <div className='Telecom_content'>
+                    <div className='Telecom_info mt_xl'>
+                        {
+                            els.map((el, index) => (
+                                <BlockWithText className={'Telecom'} title={el.title} text={el.text} text2={el.text2} left={el.left}
+                                    index={index + 1} key={`BlockWithLines_${index}`} />
+                            ))
+                        }
+                    </div>
 
-              </div>
-          </div>
-      </>
+                </div>
+            </div>
+        </>
     )
 }

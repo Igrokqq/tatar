@@ -173,7 +173,7 @@ export default () => {
                     country: 'USA',
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
-                    poster: '/img/map/1.webp',
+                    endImage: '/img/map/1.webp',
                     position: {
                         x: -.43,
                         y: 0.01,
@@ -184,7 +184,7 @@ export default () => {
                     country: 'Germany',
                     address: 'Address',
                     video: '/video/map/Dusseldorf.mp4',
-                    poster: '/img/map/2.webp',
+                    endImage: '/img/map/2.webp',
                     textPos: 'left',
                     mode: 'end-stop',  // или 'end-image'
                     position: {
@@ -197,7 +197,7 @@ export default () => {
                     country: 'Germany',
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
-                    poster: '/img/map/3.webp',
+                    endImage: '/img/map/3.webp',
                     textPos: 'center',
                     mode: 'end-stop',  // или 'end-image'
                     position: {
@@ -210,6 +210,7 @@ export default () => {
                     country: 'Germany',
                     address: 'Address',
                     video: '/video/map/Munich.mp4',
+                    endImage: '/img/map/4.webp',
                     mode: 'end-stop',  // или 'end-image'
                     position: {
                         x: -.035,
@@ -221,7 +222,7 @@ export default () => {
                     country: '',
                     address: 'Address',
                     video: '/video/map/Padderborn.mp4',
-                    poster: '/img/map/5.webp',
+                    endImage: '/img/map/5.webp',
                     textPos: 'left',
                     position: {
                         x: .455,
